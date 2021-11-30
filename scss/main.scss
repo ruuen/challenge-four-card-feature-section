@@ -1,0 +1,23 @@
+// Reset styles
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+
+
+// Variables
+    // Colours
+
+    // Fonts
+    $font-primary: 'Poppins', sans-serif;
+
+// Styling
+
+// Media Queries
+@import 'mediaqry';
