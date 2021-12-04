@@ -18,6 +18,7 @@ body {
 h1, h2, h3, h4, h5, p {
   font-family: "Poppins", sans-serif;
   overflow-wrap: break-word;
+  user-select: none;
 }
 
 .page__wrapper {
@@ -33,7 +34,7 @@ h1, h2, h3, h4, h5, p {
 .section__description h1 {
   color: #a3a5ae;
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 .section__description h2 {
   color: #4c4e61;
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5, p {
 .section__description p {
   color: #a3a5ae;
   padding: 1rem 1rem 0 1rem;
-  font-size: 0.92rem;
+  font-size: 0.92em;
 }
 
 .card__group > .card__wrapper {
@@ -68,6 +69,7 @@ h1, h2, h3, h4, h5, p {
   width: 100%;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05), 0 16px 16px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.02);
   border-radius: 6px;
+  background-color: #FFF;
 }
 .card__wrapper .card__text-heading {
   color: #4c4e61;
@@ -80,4 +82,55 @@ h1, h2, h3, h4, h5, p {
 .card__wrapper .card__icon {
   display: block;
   margin: 0 0 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .section__description h1 {
+    font-size: 2em;
+  }
+  .section__description h2 {
+    font-size: 2em;
+  }
+  .section__description p {
+    width: 40vw;
+    margin: 0 auto;
+  }
+
+  .page__wrapper {
+    padding: 4.5rem 7rem;
+  }
+
+  .card__group {
+    display: grid;
+    grid: "left middletop right" auto "left middlebottom right" auto/1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+  }
+  .card__group > .card__wrapper {
+    margin: 0;
+  }
+  .card__group .card__wrapper {
+    min-height: max-content;
+  }
+  .card__group .card__supervisor {
+    grid-area: left;
+  }
+  .card__group .card__team-builder {
+    grid-area: middletop;
+  }
+  .card__group .card__karma {
+    grid-area: middlebottom;
+  }
+  .card__group .card__calculator {
+    grid-area: right;
+  }
+  .card__group .card__text-body {
+    padding: 0.6rem 0 2.5rem 0;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .section__description p {
+    width: 25vw;
+  }
 }

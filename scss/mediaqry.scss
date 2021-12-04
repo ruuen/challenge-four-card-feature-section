@@ -1,0 +1,67 @@
+@media screen and (min-width: 1000px) {
+    .section__description {
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        p {
+            width: 40vw;
+            margin: 0 auto;
+        }
+    }
+
+    .page__wrapper {
+        padding: 4.5rem 7rem;
+    }
+
+    .card__group {
+        display: grid;
+        grid: 
+            "left middletop right" auto 
+            "left middlebottom right" auto /
+            1fr 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        justify-items: center;
+
+        > .card__wrapper {
+            margin: 0;
+        }
+
+        .card__wrapper {
+            min-height: max-content;
+        }
+
+        .card__supervisor {
+            grid-area: left;
+        }
+
+        .card__team-builder {
+            grid-area: middletop;
+        }
+
+        .card__karma {
+            grid-area: middlebottom;
+        }
+
+        .card__calculator {
+            grid-area: right;
+        }
+
+        .card__text-body {
+            padding: 0.6rem 0 2.5rem 0;
+        }
+    }
+
+    
+}
+
+@media screen and (min-width: 1600px) {
+    .section__description p {
+        width: 25vw;
+    }
+}

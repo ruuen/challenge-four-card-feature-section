@@ -32,6 +32,7 @@ body {
 h1, h2, h3, h4, h5, p {
     font-family: $font-primary;
     overflow-wrap: break-word;
+    user-select: none;
 }
 
 // Styling
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, p {
     h1 {
         color: $clr-blue-grey;
         font-weight: 200;
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 
     h2 {
@@ -59,7 +60,7 @@ h1, h2, h3, h4, h5, p {
     p {
         color: $clr-blue-grey;
         padding: 1rem 1rem 0 1rem;
-        font-size: 0.92rem;
+        font-size: 0.92em;
     }
 }
 
@@ -97,6 +98,7 @@ h1, h2, h3, h4, h5, p {
         0 16px 16px rgba(0,0,0,0.05),
         0 24px 24px rgba(0,0,0,0.02);
     border-radius: 6px;
+    background-color: #FFF;
 
     .card__text-heading {
         color: $clr-blue-vdark;
@@ -113,9 +115,6 @@ h1, h2, h3, h4, h5, p {
         margin: 0 0 0 auto;
     }
 }
-
-
-
 
 // Media Queries
 @import 'mediaqry';
