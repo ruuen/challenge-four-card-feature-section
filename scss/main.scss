@@ -1,7 +1,18 @@
+// Variables
+    // Colours
+    $clr-grey-vlight: hsl(0, 0%, 98%);
+    $clr-red: hsl(0, 78%, 62%);
+    $clr-orange: hsl(34, 97%, 64%);
+    $clr-cyan: hsl(180, 62%, 55%);
+    $clr-blue: hsl(212, 86%, 64%);
+    $clr-blue-grey: hsl(229, 6%, 66%);
+    $clr-blue-vdark: hsl(234, 12%, 34%);
+
+    // Fonts
+    $font-primary: 'Poppins', sans-serif;
+
 // Reset styles
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -9,15 +20,102 @@
     margin: 0;
 }
 
+html, body {
+    min-height: 100%;
+}
 
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: $clr-grey-vlight;
+}
 
-// Variables
-    // Colours
-
-    // Fonts
-    $font-primary: 'Poppins', sans-serif;
+h1, h2, h3, h4, h5, p {
+    font-family: $font-primary;
+    overflow-wrap: break-word;
+}
 
 // Styling
+.page__wrapper {
+    padding: 4.5rem 1.5rem;
+}
+
+.section__description {
+    padding: 0 0 3.5rem 0;
+
+    h1, h2, p {
+        text-align: center;
+    }
+
+    h1 {
+        color: $clr-blue-grey;
+        font-weight: 200;
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        color: $clr-blue-vdark;
+    }
+
+    p {
+        color: $clr-blue-grey;
+        padding: 1rem 1rem 0 1rem;
+        font-size: 0.92rem;
+    }
+}
+
+.card__group {
+    > .card__wrapper {
+        margin: 0 0 2rem 0;
+    }
+
+    > .card__wrapper:last-child {
+        margin: 0;
+    }
+
+    .card__supervisor {
+        border-top: 4px solid $clr-cyan;
+    }
+
+    .card__team-builder {
+        border-top: 4px solid $clr-red;
+    }
+
+    .card__karma {
+        border-top: 4px solid $clr-orange;
+    }
+
+    .card__calculator {
+        border-top: 4px solid $clr-blue;
+    }
+}
+
+.card__wrapper {
+    padding: 1.5rem 2rem;
+    width: 100%;
+    box-shadow:
+        0 8px 8px rgba(0,0,0,0.05),
+        0 16px 16px rgba(0,0,0,0.05),
+        0 24px 24px rgba(0,0,0,0.02);
+    border-radius: 6px;
+
+    .card__text-heading {
+        color: $clr-blue-vdark;
+    }
+
+    .card__text-body {
+        padding: 0.6rem 0 1.5rem 0;
+        color: $clr-blue-grey;
+        font-size: 0.92rem;
+    }
+
+    .card__icon {
+        display: block;
+        margin: 0 0 0 auto;
+    }
+}
+
+
+
 
 // Media Queries
 @import 'mediaqry';
